@@ -4,6 +4,12 @@ A machine learning web app that recommends courses based on ones you've already 
 
 ---
 
+## Screenshots
+
+[<img src="screenshots/light-mode.png" alt="Light Mode" width="49%"/>](screenshots/light-mode.png) [<img src="screenshots/dark-mode.png" alt="Dark Mode" width="49%"/>](screenshots/dark-mode.png)
+
+---
+
 ## How It Works
 
 The recommender builds a user profile by averaging the genre vectors of your selected courses, then ranks all other courses by cosine similarity to that profile. The more courses you select, the more personalized the results.
@@ -30,10 +36,15 @@ course-recommender/
 ├── app.py                 # FastAPI backend
 ├── course_genre.csv       # Course dataset (307 courses, genre vectors)
 ├── requirements.txt       # Python dependencies
-├── src/
-│   └── App.jsx            # React frontend (single file)
-├── package.json           # Node dependencies (Vite + React)
-├── index.html             # Vite HTML entry point
+├── screenshots/           # App screenshots
+│   ├── light-mode.png
+│   └── dark-mode.png
+├── course-ui/
+│   ├── src/
+│   │   └── App.jsx        # React frontend (single file)
+│   ├── package.json       # Node dependencies (Vite + React)
+│   └── index.html         # Vite HTML entry point
+├── README.md
 └── .gitignore
 ```
 
@@ -60,6 +71,7 @@ Backend runs at `http://127.0.0.1:8000`
 ### 3. Start the frontend
 
 ```bash
+cd course-ui
 npm install
 npm run dev
 ```
@@ -107,4 +119,6 @@ curl -X POST "http://127.0.0.1:8000/recommend?n=5" \
 
 ## Dataset
 
-`course_genre.csv` contains 307 courses. Each row has a `COURSE_ID`, `TITLE`, and binary genre columns indicating which topics the course covers (e.g., Machine Learning, Python, Data Analysis, etc.).
+`course_genre.csv` contains 307 courses sourced from the [IBM Machine Learning with Python course](https://www.coursera.org/learn/machine-learning-with-python) on Coursera, provided by IBM. Each row has a `COURSE_ID`, `TITLE`, and binary genre columns indicating which topics the course covers (e.g., Machine Learning, Python, Data Analysis, etc.).
+
+> **Credit:** Course dataset provided by IBM via Coursera.
