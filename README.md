@@ -6,7 +6,8 @@ A machine learning web app that recommends courses based on ones you've already 
 
 ## Screenshots
 
-[<img src="screenshots/light-mode.png" alt="Light Mode" width="49%"/>](screenshots/light-mode.png) [<img src="screenshots/dark-mode.png" alt="Dark Mode" width="49%"/>](screenshots/dark-mode.png)
+![Light Mode](screenshots/light-mode.png)
+![Dark Mode](screenshots/dark-mode.png)
 
 ---
 
